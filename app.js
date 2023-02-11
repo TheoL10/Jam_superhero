@@ -9,9 +9,8 @@ var usersRouter = require('./routes/users');
 
 var app = express();
 
-// view engine setup
 app.set('views', path.join(__dirname, 'views'));
-app.set('view engine', 'jade');
+app.set('view engine', 'ejs');
 
 app.use(logger('dev'));
 app.use(express.json());
@@ -29,13 +28,30 @@ app.use(function(req, res, next) {
 
 // error handler
 app.use(function(err, req, res, next) {
-  // set locals, only providing error in development
-  res.locals.message = err.message;
-  res.locals.error = req.app.get('env') === 'development' ? err : {};
+  if (req.timedout && req.headers.upgrade === 'websocket') {
+    // Ignores websocket timeout.
+    return;
+  }
 
-  // render the error page
-  res.status(err.status || 500);
-  res.render('error');
+  var statusCode = err.status || 500;
+  if (statusCode === 500) {
+    console.error(err.stack || err);
+  }
+  if (req.timedout) {
+    console.error('Request timeout: url=%s, timeout=%d, please check whether its execution time is too long, or the response callback is invalid.', req.originalUrl, err.timeout);
+  }
+  res.status(statusCode);
+  // Do not output exception details by default.
+  var error = {};
+  if (app.get('env') === 'development') {
+    // Displays exception stack on page if running in the development enviroment.
+    error = err;
+  }
+  res.render('error', {
+    message: err.message,
+    error: error
+  });
 });
+
 
 module.exports = app;
