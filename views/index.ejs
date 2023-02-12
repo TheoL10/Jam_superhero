@@ -587,7 +587,9 @@
           // Display the winner
           if (character1Score > character2Score)
             document.querySelector("#winner").textContent = `Winner: Player 1`;
-          else
+          if (character1Score == character2Score)
+            document.querySelector("#winner").textContent = `it's a tie`;  
+          if (character1Score < character2Score)
             document.querySelector("#winner").textContent = `Winner: Player 2`;
           console.log(winner)
 
