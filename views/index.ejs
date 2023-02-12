@@ -5,10 +5,20 @@
           /* Add your CSS styles here */
           .container {
             display: flex;
-            height: 100vh;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+
+            
+          }
+          .banner {
+            display: flex;
+            height: 50vh;
+            background:  linear-gradient(90deg, rgba(18,94,203,1) 0%, rgba(67,21,198,1) 46%, rgba(170,18,55,1) 60%, rgba(255,164,0,1) 100%);
+
           }
           .left-side {
-            background-color: blue;
+            background: linear-gradient(to bottom, #113af1, #79bde7),;
             width: 50%;
             display: flex;
             justify-content: center;
@@ -20,6 +30,11 @@
             display: flex;
             justify-content: center;
             align-items: center;
+          }
+          .side {
+            width: 50%;
+            display: flex;
+            flex-direction: column;
           }
           .logo {
             background-color: white;
@@ -34,22 +49,8 @@
             left: 50%;
             transform: translate(-50%, -50%);
           }
-          .grid {
-            display: grid;
-            grid-template-columns: repeat(6, 1fr);
-            grid-template-rows: repeat(2, 1fr);
-            grid-gap: 10px;
-            position: absolute;
-            top: 20%;
-            left: 50%;
-            transform: translate(-50%, 0);
-          }
-          .grid img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            cursor: pointer;
-          }
+          
+          
           .character-stats {
             position: absolute;
             bottom: 20%;
@@ -61,33 +62,98 @@
           .stat {
             margin-bottom: 10px;
           }
+          .grid {
+            position: relative;
+        display: grid;
+        width: 80%;
+        height: 100%;
+        grid-template-columns: repeat(5, 1fr);
+        
+        grid-gap: 10px;
+        padding: 10px;
+      }
+      .grid img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            cursor: pointer;
+          }
+          .button {
+            position: bottom;
+          }
         </style>
       </head>
       <body>
+       
+          <div class="banner" style="  position: relative">
+            <img class="logo" src="public\images\logo.png" alt="Round logo" style="position: absolute; ">
+          </div>
+        
+          
+        <div style="background:  linear-gradient(90deg, rgba(18,94,203,1) 0%, rgba(67,21,198,1) 46%, rgba(170,18,55,1) 60%, rgba(255,164,0,1) 100%); display: flex; flex-direction: column; align-items: center;">
         <div class="container">
-          <div class="left-side">
-            <img src="public\images\volcan.png" alt="Grid on the left side">
-          </div>
-          <div class="right-side">
-            <img src="../assets/amerique man.png" alt="Grid on the right side">
-          </div>
+        <div class="side" >
+            <div class="grid" >
+            
+              <button class="btn btn-primary">
+                <img src="public/images/amerique man.png" alt="Character-1-Team1">
+              </button>
+              <button class="btn btn-primary">
+                <img src="public/images/black panther.png" alt="Character-2-Team1">
+              </button>
+              <button class="btn btn-primary">
+                <img src="public/images/policier.png" alt="Character-2-Team1">
+              </button>
+              <button class="btn btn-primary">
+                <img src="public/images/hulk.png" alt="Character-2-Team1">
+              </button>
+              <button class="btn btn-primary">
+                <img src="public/images/jojo.png" alt="Character-2-Team1">
+              </button>
+            </div>
+            <div><img src="public/images/volcan.png", style="height: 70%; width: 70%;"></div>
+            </div>
+              <!-- Add more buttons here -->
+            <div><img src="public/images/Street_Fighter_VS_logo.png" alt="vs"> </div>
+            <div class="side" >
+              <div class="grid">
+              <button class="btn btn-primary">
+                <img src="public/images/blackwidow.png" alt="Character-1-Team2">
+              </button>
+              <button class="btn btn-primary">
+                <img src="public/images/fer man.png" alt="Character-2-Team2">
+              </button>
+              <button class="btn btn-primary">
+                <img src="public/images/spiderman.png" alt="Character-2-Team2">
+              </button>
+              <button class="btn btn-primary">
+                <img src="public/images/superman.png" alt="Character-2-Team2">
+              </button>
+              <button class="btn btn-primary">
+                <img src="public/images/wonder woman.png" alt="Character-2-Team2">
+              </button>
+              <!-- Add more buttons here -->
+            </div>
+            <div><img src="public/images/volcan.png", style="height: 70%; width: 70%;"></div>
+
+
+         
         </div>
-        <div class="logo">
-          <img src="public\images\logo.png" alt="Round logo">
-        </div>
-        <div class="grid">
-          <!-- Add your character images here -->
-          <img src="../assets/jojo.png*" alt="Character 1" id="character-1">
-          <img src="../assets/spiderman.png" alt="Character 2" id="character-2">
-          <!-- Add more character images as needed -->
-        </div>
-        <div class="character-stats">
-            <!-- Character stats will be added here -->
-          </div>
-        </div>
+       
+      </div>
+      <div class="button"><button style="background-color: transparent; background-repeat:no-repeat; border: none; cursor:pointer; overflow: hidden;    " ><img src="public/images/fight.png"></button></div>
+      
+        
+      
+        
+          
+       
+      
+        <div class="character-stats"></div>
+    </div>   <!-- Character stats will be added here -->
+          
       </body>
-      <script>
-        // Add event listeners to the character images
-        const characterImages = document.querySelectorAll(".grid img");
-      </script>
+      
     </html>
+
+    
