@@ -56,19 +56,27 @@
           
           .character-stats1 {
             position: absolute;
-            top: 95%;
-            left: 15%;
+            top: 94%;
+            left: 16%;
             display: flex;
             flex-direction: column;
             align-items: flex-start;
           }
+          .character-stats1 img {
+            width: 200px !important;
+            height: 200px !important;
+          }
           .character-stats2 {
             position: absolute;
-            top: 95%;
-            right: -20%;
+            top: 94%;
+            right: 16%;
             display: flex;
             flex-direction: column;
             align-items: flex-start;
+          }
+          .character-stats2 img {
+            width: 200px !important;
+            height: 200px !important;
           }
           .stat1 {
             margin-bottom: 10px;
@@ -91,6 +99,10 @@
         
         grid-gap: 10px;
         padding: 10px;
+      }
+      img {
+        object-fit: cover;
+        object-position: bottom;
       }
       .gridbtn1 {
         border-radius: 64px;
@@ -194,6 +206,7 @@
                 <img src="public/images/wonder woman.png" alt="Character 9" id="character-9">
               </button>
             </div>
+            <div class="character-stats2"></div>
             <img src="public/images/volcan.png", style="height: 50%; width: 50%; border-radius: 40px;">
             </div>
               <!-- Add more buttons here -->
@@ -232,6 +245,7 @@
                 </button>
               <!-- Add more buttons here -->
             </div>
+            <div class="character-stats1"></div>
             <img src="public/images/volcan.png", style="height: 50%; width: 50%; border-radius: 40px;">
 
 
@@ -239,6 +253,8 @@
         </div>
        
       </div>
+      <div id="winner"></div>
+      <button id="fight-button" disabled>Fight</button>
       
         
       
@@ -246,11 +262,7 @@
           
        
       
-        <div class="character-stats1"></div>
     </div>   <!-- Character stats will be added here -->
-    <div class="character-stats2"></div>
-    <button id="fight-button" disabled>Fight</button>
-    <div id="winner"></div>
     </div>   <!-- Character stats will be added here -->
           
       </body>
