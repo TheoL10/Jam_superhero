@@ -585,7 +585,10 @@
           // Determine the winner
           const winner = character1Score > character2Score ? selectedCharacter1.Name : selectedCharacter2.Name;
           // Display the winner
-          document.querySelector("#winner").textContent = `Winner: ${winner}`;
+          if (character1Score > character2Score)
+            document.querySelector("#winner").textContent = `Winner: Player 1`;
+          else
+            document.querySelector("#winner").textContent = `Winner: Player 2`;
           console.log(winner)
 
         }
