@@ -54,15 +54,26 @@
           }
           
           
-          .character-stats {
+          .character-stats1 {
             position: absolute;
-            bottom: 20%;
-            left: 20%;
+            top: 95%;
+            left: 15%;
             display: flex;
             flex-direction: column;
             align-items: flex-start;
           }
-          .stat {
+          .character-stats2 {
+            position: absolute;
+            top: 95%;
+            right: -20%;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+          }
+          .stat1 {
+            margin-bottom: 10px;
+          }
+          .stat2 {
             margin-bottom: 10px;
           }
           .grid1 {
@@ -122,6 +133,22 @@
           .button {
             position: bottom;
           }
+          #fight-button {
+        display: block;
+        margin: 20px auto;
+        padding: 10px 20px;
+        background-color: #333;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+
+      #winner {
+        text-align: center;
+        margin-top: 10px;
+        font-size: 20px;
+      }
         </style>
       </head>
       <body style="margin: 0;">
@@ -137,34 +164,34 @@
             <div class="grid1" >
             
               <button class="btn gridbtn1 btn-primary">
-                <img src="public/images/amerique man.png" alt="Character-1-Team1">
+                <img src="public/images/amerique man.png" alt="Character 10" id="character-10">
               </button>
               <button class="btn gridbtn1 btn-primary">
-                <img src="public/images/black panther.png" alt="Character-2-Team1">
+                <img src="public/images/black panther.png" alt="Character 7" id="character-7">
               </button>
               <button class="btn gridbtn1 btn-primary">
-                <img src="public/images/policier.png" alt="Character-3-Team1">
+                <img src="public/images/policier.png" alt="Character 3" id="character-3">
               </button>
               <button class="btn gridbtn1 btn-primary">
-                <img src="public/images/hulk.png" alt="Character-4-Team1">
+                <img src="public/images/hulk.png" alt="Character 4" id="character-4">
               </button>
               <button class="btn gridbtn1 btn-primary">
-                <img src="public/images/jojo.png" alt="Character-5-Team1">
+                <img src="public/images/jojo.png" alt="Character 1" id="character-1">
               </button>
               <button class="btn gridbtn1 btn-primary">
-                <img src="public/images/blackwidow.png" alt="Character-6-Team2">
+                <img src="public/images/blackwidow.png" alt="Character 5" id="character-5">
               </button>
               <button class="btn gridbtn1 btn-primary">
-                <img src="public/images/fer man.png" alt="Character-7-Team2">
+                <img src="public/images/fer man.png" alt="Character 6" id="character-6">
               </button>
               <button class="btn gridbtn1 btn-primary">
-                <img src="public/images/spiderman.png" alt="Character-8-Team2">
+                <img src="public/images/spiderman.png" alt="Character 2" id="character-2">
               </button>
               <button class="btn gridbtn1 btn-primary">
-                <img src="public/images/superman.png" alt="Character-9-Team2">
+                <img src="public/images/superman.png" alt="Character 8" id="character-8">
               </button>
               <button class="btn gridbtn1 btn-primary">
-                <img src="public/images/wonder woman.png" alt="Character-10-Team2">
+                <img src="public/images/wonder woman.png" alt="Character 9" id="character-9">
               </button>
             </div>
             <img src="public/images/volcan.png", style="height: 50%; width: 50%; border-radius: 40px;">
@@ -173,36 +200,36 @@
             <div><img src="public/images/Street_Fighter_VS_logo.png" alt="vs"> </div>
             <div class="side" >
               <div class="grid2">
-                <button class="btn gridbtn2 btn-primary">
-                  <img src="public/images/amerique man.png" alt="Character-1-Team1">
+                <button class="btn gridbtn1 btn-primary">
+                  <img src="public/images/amerique man.png" alt="Character 10" id="character-10">
                 </button>
-                <button class="btn gridbtn2 btn-primary">
-                  <img src="public/images/black panther.png" alt="Character-2-Team1">
+                <button class="btn gridbtn1 btn-primary">
+                  <img src="public/images/black panther.png" alt="Character 7" id="character-7">
                 </button>
-                <button class="btn gridbtn2 btn-primary">
-                  <img src="public/images/policier.png" alt="Character-3-Team1">
+                <button class="btn gridbtn1 btn-primary">
+                  <img src="public/images/policier.png" alt="Character 3" id="character-3">
                 </button>
-                <button class="btn gridbtn2 btn-primary">
-                  <img src="public/images/hulk.png" alt="Character-4-Team1">
+                <button class="btn gridbtn1 btn-primary">
+                  <img src="public/images/hulk.png" alt="Character 4" id="character-4">
                 </button>
-                <button class="btn gridbtn2 btn-primary">
-                  <img src="public/images/jojo.png" alt="Character-5-Team1">
+                <button class="btn gridbtn1 btn-primary">
+                  <img src="public/images/jojo.png" alt="Character 1" id="character-1">
                 </button>
-              <button class="btn gridbtn2 btn-primary">
-                <img src="public/images/blackwidow.png" alt="Character-6-Team2">
-              </button>
-              <button class="btn gridbtn2 btn-primary">
-                <img src="public/images/fer man.png" alt="Character-7-Team2">
-              </button>
-              <button class="btn gridbtn2 btn-primary">
-                <img src="public/images/spiderman.png" alt="Character-8-Team2">
-              </button>
-              <button class="btn gridbtn2 btn-primary">
-                <img src="public/images/superman.png" alt="Character-9-Team2">
-              </button>
-              <button class="btn gridbtn2 btn-primary">
-                <img src="public/images/wonder woman.png" alt="Character-10-Team2">
-              </button>
+                <button class="btn gridbtn1 btn-primary">
+                  <img src="public/images/blackwidow.png" alt="Character 5" id="character-5">
+                </button>
+                <button class="btn gridbtn1 btn-primary">
+                  <img src="public/images/fer man.png" alt="Character 6" id="character-6">
+                </button>
+                <button class="btn gridbtn1 btn-primary">
+                  <img src="public/images/spiderman.png" alt="Character 2" id="character-2">
+                </button>
+                <button class="btn gridbtn1 btn-primary">
+                  <img src="public/images/superman.png" alt="Character 8" id="character-8">
+                </button>
+                <button class="btn gridbtn1 btn-primary">
+                  <img src="public/images/wonder woman.png" alt="Character 9" id="character-9">
+                </button>
               <!-- Add more buttons here -->
             </div>
             <img src="public/images/volcan.png", style="height: 50%; width: 50%; border-radius: 40px;">
@@ -212,7 +239,6 @@
         </div>
        
       </div>
-      <div class="button"><button style="background-color: transparent; background-repeat:no-repeat; border: none; cursor:pointer; overflow: hidden;    " ><img src="public/images/fight.png"></button></div>
       
         
       
@@ -220,11 +246,334 @@
           
        
       
-        <div class="character-stats"></div>
+        <div class="character-stats1"></div>
+    </div>   <!-- Character stats will be added here -->
+    <div class="character-stats2"></div>
+    <button id="fight-button" disabled>Fight</button>
+    <div id="winner"></div>
     </div>   <!-- Character stats will be added here -->
           
       </body>
-      
+      <script>
+        let selectedCharacter1;
+        let selectedCharacter2;
+        // Add event listeners to the character images
+        const characterImages = document.querySelectorAll(".grid1 img");
+        characterImages.forEach(img => {
+          img.addEventListener("click", function() {
+            const id = this.id;
+            const characterStats = document.querySelector(".character-stats1");
+            // Get the character stats based on the id of the image that was clicked
+            let stats;
+            switch (id) {
+              case "character-1":
+                stats = {
+                  Name: "Jojo",
+                  Strength: 200,
+                  Hp: 200,
+                  Intelligence: 200,
+                  Dodge: 50,
+                  CritChance: 100
+                };
+                path = "public\\images\\jojo.png";
+                break;
+              case "character-2":
+                stats = {
+                  Name: "Spiderman",
+                  Strength: 120,
+                  Hp: 150,
+                  Intelligence: 180,
+                  Dodge: 50,
+                  CritChance: 20
+                };
+                path = "public\\images\\spiderman.png";
+                break;
+              case "character-3":
+                stats = {
+                  Name: "Policier",
+                  Strength: 100,
+                  Hp: 120,
+                  Intelligence: 200,
+                  Dodge: 60,
+                  CritChance: 15
+                };
+                path = "public\\images\\policier.png";
+                break;
+              case "character-4":
+                stats = {
+                  Name: "Hulk",
+                  Strength: 140,
+                  Hp: 180,
+                  Intelligence: 160,
+                  Dodge: 40,
+                  CritChance: 25
+                };
+                path = "public\\images\\hulk.png";
+                break;
+              case "character-5":
+                stats = {
+                  Name: "Black Widow",
+                  Strength: 180,
+                  Hp: 100,
+                  Intelligence: 120,
+                  Dodge: 70,
+                  CritChance: 30
+                };
+                path = "public\\images\\blackwidow.png";
+                break;
+              case "character-6":
+                stats = {
+                  Name: "Iron Man",
+                  Strength: 100,
+                  Hp: 160,
+                  Intelligence: 140,
+                  Dodge: 50,
+                  CritChance: 35
+                };
+                path= "public\\images\\fer man.png";
+                break;
+              
+              case "character-7":
+                stats = {
+                  Name: "Black Panther",
+                  Strength: 120,
+                  Hp: 140,
+                  Intelligence: 180,
+                  Dodge: 60,
+                  CritChance: 40
+                };
+                path = "public\\images\\black panther.png";	
+                break;
+              
+              case "character-8":
+                stats = {
+                  Name: "Superman",
+                  Strength: 160,
+                  Hp: 180,
+                  Intelligence: 100,
+                  Dodge: 70,
+                  CritChance: 45
+                };
+                path = "public\\images\\superman.png";
+                break;
+              case "character-9":
+                stats = {
+                  Name: "Wonder Woman",
+                  Strength: 180,
+                  Hp: 120,
+                  Intelligence: 160,
+                  Dodge: 40,
+                  CritChance: 50
+                };
+                path = "public\\images\\wonder woman.png";
+                break;
+              case "character-10":
+                stats = {
+                  Name: "Captain America",
+                  Strength: 140,
+                  Hp: 160,
+                  Intelligence: 120,
+                  Dodge: 60,
+                  CritChance: 55
+                };
+                path = "public\\images\\amerique man.png";
+            }
+            selectedCharacter1 = stats;
+            // Update the character stats on the page
+            const characterStatsContainer = document.querySelector(".character-stats1");
+            characterStatsContainer.innerHTML = "";
+            for (const key in stats) {
+              const stat = document.createElement("div");
+              stat.classList.add("stat");
+              stat.innerHTML = `<strong>${key}:</strong> ${stats[key]}`;
+              stat.style.color = "white";
+              characterStatsContainer.appendChild(stat);
+            }
+            // Create the character image
+            const characterImage = document.createElement("img");
+            characterImage.src = id + ".png";
+            characterImage.alt = "Character image";
+            characterImage.style.width = "30%";
+            characterImage.style.height = "auto";
+            characterImage.style.marginLeft = "10px";
+            characterImage.src = path;
+            console.log(characterImage);
+
+            // Add the character image to the character stats
+            characterStats.appendChild(characterImage);
+            if (selectedCharacter1 && selectedCharacter2) {
+              document.querySelector("#fight-button").removeAttribute("disabled");
+            }
+
+          });
+        });
+        // Add event listeners to the character images
+        const characterImages2 = document.querySelectorAll(".grid2 img");
+        characterImages2.forEach(img => {
+          img.addEventListener("click", function() {
+            const id = this.id;
+            const characterStats = document.querySelector(".character-stats2");
+            // Get the character stats based on the id of the image that was clicked
+            let stats;
+            switch (id) {
+              case "character-1":
+                stats = {
+                  Name: "Jojo",
+                  Strength: 200,
+                  Hp: 200,
+                  Intelligence: 200,
+                  Dodge: 50,
+                  CritChance: 100
+                };
+                path = "public\\images\\jojo.png";
+                break;
+              case "character-2":
+                stats = {
+                  Name: "Spiderman",
+                  Strength: 120,
+                  Hp: 150,
+                  Intelligence: 180,
+                  Dodge: 50,
+                  CritChance: 20
+                };
+                path = "public\\images\\spiderman.png";
+                break;
+              case "character-3":
+                stats = {
+                  Name: "Policier",
+                  Strength: 100,
+                  Hp: 120,
+                  Intelligence: 200,
+                  Dodge: 60,
+                  CritChance: 15
+                };
+                path = "public\\images\\policier.png";
+                break;
+              case "character-4":
+                stats = {
+                  Name: "Hulk",
+                  Strength: 140,
+                  Hp: 180,
+                  Intelligence: 160,
+                  Dodge: 40,
+                  CritChance: 25
+                };
+                path = "public\\images\\hulk.png";
+                break;
+              case "character-5":
+                stats = {
+                  Name: "Black Widow",
+                  Strength: 180,
+                  Hp: 100,
+                  Intelligence: 120,
+                  Dodge: 70,
+                  CritChance: 30
+                };
+                path = "public\\images\\blackwidow.png";
+                break;
+              case "character-6":
+                stats = {
+                  Name: "Iron Man",
+                  Strength: 100,
+                  Hp: 160,
+                  Intelligence: 140,
+                  Dodge: 50,
+                  CritChance: 35
+                };
+                path= "public\\images\\fer man.png";
+                break;
+              
+              case "character-7":
+                stats = {
+                  Name: "Black Panther",
+                  Strength: 120,
+                  Hp: 140,
+                  Intelligence: 180,
+                  Dodge: 60,
+                  CritChance: 40
+                };
+                path = "public\\images\\black panther.png";	
+                break;
+              
+              case "character-8":
+                stats = {
+                  Name: "Superman",
+                  Strength: 160,
+                  Hp: 180,
+                  Intelligence: 100,
+                  Dodge: 70,
+                  CritChance: 45
+                };
+                path = "public\\images\\superman.png";
+                break;
+              case "character-9":
+                stats = {
+                  Name: "Wonder Woman",
+                  Strength: 180,
+                  Hp: 120,
+                  Intelligence: 160,
+                  Dodge: 40,
+                  CritChance: 50
+                };
+                path = "public\\images\\wonder woman.png";
+                break;
+              case "character-10":
+                stats = {
+                  Name: "Captain America",
+                  Strength: 140,
+                  Hp: 160,
+                  Intelligence: 120,
+                  Dodge: 60,
+                  CritChance: 55
+                };
+                path = "public\\images\\amerique man.png";
+            }
+
+            selectedCharacter2 = stats;
+
+            // Update the character stats on the page
+            const characterStatsContainer = document.querySelector(".character-stats2");
+            characterStatsContainer.innerHTML = "";
+            for (const key in stats) {
+              const stat = document.createElement("div");
+              stat.classList.add("stat");
+              stat.innerHTML = `<strong>${key}:</strong> ${stats[key]}`;
+              stat.style.color = "white";
+              characterStatsContainer.appendChild(stat);
+            }
+            // Create the character image
+            const characterImage = document.createElement("img");
+            characterImage.src = id + ".png";
+            characterImage.alt = "Character image";
+            characterImage.style.width = "30%";
+            characterImage.style.height = "auto";
+            characterImage.style.marginLeft = "10px";
+            characterImage.src = path;
+            console.log(characterImage);
+
+            // Add the character image to the character stats
+            characterStats.appendChild(characterImage);
+            if (selectedCharacter1 && selectedCharacter2) {
+              document.querySelector("#fight-button").removeAttribute("disabled");
+            }
+
+          });
+        });
+        function fight() {
+          // Calculate the stats of the two characters
+          const character1Score = (2 * selectedCharacter1.Hp + 3 * selectedCharacter1.Intelligence + 4 * selectedCharacter1.Strength + selectedCharacter1.Dodge) / 10 + selectedCharacter1.CritChance;
+          const character2Score = (2 * selectedCharacter2.Hp + 3 * selectedCharacter2.Intelligence + 4 * selectedCharacter2.Strength + selectedCharacter2.Dodge) / 10 + selectedCharacter2.CritChance;
+          // Determine the winner
+          const winner = character1Score > character2Score ? selectedCharacter1.Name : selectedCharacter2.Name;
+          // Display the winner
+          document.querySelector("#winner").textContent = `Winner: ${winner}`;
+          console.log(winner)
+
+        }
+  
+  // Add event listener to the fight button
+          document.querySelector("#fight-button").addEventListener("click", fight);
+      </script>
     </html>
 
     
